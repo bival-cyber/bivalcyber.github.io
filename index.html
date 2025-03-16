@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethicalbyet - Bival Rohin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      color: #0f0;
+      background: black;
+      overflow-x: hidden;
+    }
+
+    /* Binary Background Animation */
+    .binary-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      background: black;
+    }
+
+    .binary-background span {
+      position: absolute;
+      top: -50px;
+      color: #0f0;
+      font-size: 1.2rem;
+      animation: binary-rain 5s linear infinite;
+    }
+
+    @keyframes binary-rain {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #0f0;
+      opacity: 0.8;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid #0f0;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .about, .skills, .projects, .services {
+      margin-bottom: 60px;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills ul li::before {
+      content: "▹ ";
+      color: #0f0;
+    }
+
+    /* Blog Section Styling */
+    .blog-post {
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid #0f0;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .blog-post h3 {
+      margin-top: 0;
+    }
+
+    .blog-post .more-text {
+      display: none;
+    }
+
+    .read-toggle {
+      color: cyan;
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .category-filter button {
+      background: transparent;
+      border: 1px solid #0f0;
+      color: #0f0;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .category-filter button:hover {
+      background: #0f0;
+      color: black;
+    }
+
+    .pagination {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .pagination button {
+      background: #0f0;
+      border: none;
+      color: black;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    /* Social Media Icons at Bottom */
+    .social-icons-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons-bottom a {
+      color: #0f0;
+      font-size: 1.3rem;
+      transition: 0.3s;
+    }
+
+    .social-icons-bottom a:hover {
+      color: cyan;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      .social-icons-bottom { gap: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Binary Background Animation -->
+  <div class="binary-background" id="binaryBackground"></div>
+
+  <header>
+    <h1>Ethicalbyet</h1>
+    <p>Bival Rohin | Ethical Hacker & Cybersecurity Analyst</p>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I'm Bival Rohin, an ethical hacker passionate about protecting digital spaces. With a strong foundation in penetration testing, vulnerability assessments, and cyber threat analysis, I help organizations secure their systems and data against malicious attacks. Let's build a safer cyberspace together.</p>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Penetration Testing</li>
+      <li>Network Security</li>
+      <li>Social Engineering</li>
+      <li>Linux Exploitation</li>
+      <li>Web Application Security</li>
+      <li>Malware Analysis</li>
+    </ul>
+  </section>
+
+  <section class="services">
+    <h2>Services</h2>
+    <div class="services-carousel">
+      <p>➤ Web App Penetration Testing</p>
+      <p>➤ Network Security Audit</p>
+      <p>➤ Malware Detection & Removal</p>
+      <p>➤ Phishing Simulation Training</p>
+      <p>➤ Security Consultancy</p>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>● WiFi Pentesting Toolkit</li>
+      <li>● Phishing Page Analyzer</li>
+      <li>● Android Payload Generator</li>
+      <li>● Bypass Antivirus Payload Script</li>
+      <li>● Red Team Automation Scripts</li>
+    </ul>
+  </section>
+
+  <section class="blogs">
+    <h2>Cybersecurity Blog</h2>
+
+    <div class="category-filter">
+      <button onclick="filterBlogs('all')">All</button>
+      <button onclick="filterBlogs('malware')">Malware</button>
+      <button onclick="filterBlogs('scams')">Scams</button>
+      <button onclick="filterBlogs('payloads')">Payloads</button>
+    </div>
+
+    <div id="blogList">
+      <div class="blog-post" data-category="malware">
+        <h3>New Android Malware Steals OTPs</h3>
+        <p>Recent Android malware strains are targeting OTPs and banking credentials...<span class="more-text"> Be cautious when installing third-party APKs or clicking unknown links.</span></p>
+        <span class="read-toggle" onclick="toggleReadMore(this)">Read More</span>
+      </div>
+
+      <div class="blog-post" data-category="scams">
+        <h3>Instagram Verification Scams</h3>
+        <p>Beware of scammers offering fake verification services on Instagram...<span class="more-text"> They collect sensitive info or install spyware.</span></p>
+        <span class="read-toggle" onclick="toggleReadMore(this)">Read More</span>
+      </div>
+
+      <div class="blog-post" data-category="payloads">
+        <h3>Undetectable Payload Techniques</h3>
+        <p>Learn how red teams use advanced encryption and obfuscation to build FUD payloads...<span class="more-text"> Stay ahead by understanding how they work.</span></p>
+        <span class="read-toggle" onclick="toggleReadMore(this)">Read More</span>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <button onclick="prevPage()">Prev</button>
+      <button onclick="nextPage()">Next</button>
+    </div>
+
+    <br><br>
+    <h3>Submit a Blog Tip</h3>
+    <form action="mailto:ethical.byet@mail.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required style="width:100%; padding:10px; margin:10px 0;"><br>
+      <input type="email" name="Email" placeholder="Your Email" required style="width:100%; padding:10px; margin:10px 0;"><br>
+      <textarea name="Message" placeholder="Your Blog Tip or Message" rows="5" required style="width:100%; padding:10px; margin:10px 0;"></textarea><br>
+      <button type="submit" style="padding:10px 20px; background:#0f0; color:black; border:none; cursor:pointer;">Submit</button>
+    </form>
+  </section>
+
+  <!-- Social Media Icons at Bottom -->
+  <div class="social-icons-bottom">
+    <a href="https://www.linkedin.com/in/bival-rohin-452108172" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://bivalrohin.blogspot.com" target="_blank" aria-label="Blog"><i class="fas fa-blog"></i></a>
+    <a href="https://www.instagram.com/bival_rohin_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.instagram.com/_ethical_byet_" target="_blank" aria-label="Ethicalbyet Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:bivalrohin@mail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    <a href="mailto:ethical.byet@mail.com" aria-label="Email"><i class="fas fa-envelope-open"></i></a>
+    <a href="tel:+917012432915" aria-label="Phone"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <footer>
+    &copy; 2025 Ethicalbyet | Bival Rohin | All Rights Reserved
+  </footer>
+
+  <script>
+    // Binary Background Animation
+    const binaryBackground = document.getElementById('binaryBackground');
+    const binaryCharacters = "01";
+    const columns = Math.floor(window.innerWidth / 20);
+
+    for (let i = 0; i < columns; i++) {
+      const span = document.createElement('span');
+      span.style.left = `${(100 / columns) * i}%`;
+      span.style.animationDelay = `${Math.random() * 5}s`;
+      span.textContent = binaryCharacters[Math.floor(Math.random() * binaryCharacters.length)];
+      binaryBackground.appendChild(span);
+    }
+
+    // Blog Functionality
+    function toggleReadMore(el) {
+      const moreText = el.previousElementSibling.querySelector('.more-text');
+      if (moreText.style.display === 'inline') {
+        moreText.style.display = 'none';
+        el.textContent = 'Read More';
+      } else {
+        moreText.style.display = 'inline';
+        el.textContent = 'Read Less';
+      }
+    }
+
+    function filterBlogs(category) {
+      const posts = document.querySelectorAll('.blog-post');
+      posts.forEach(post => {
+        post.style.display = category === 'all' || post.dataset.category === category ? 'block' : 'none';
+      });
+    }
+
+    let currentPage = 1;
+    const postsPerPage = 3;
+    const blogList = document.getElementById('blogList');
+    const blogPosts = blogList.querySelectorAll('.blog-post');
+
+    function showPage(page) {
+      const start = (page - 1) * postsPerPage;
+      const end = start + postsPerPage;
+      blogPosts.forEach((post, index) => {
+        post.style.display = index >= start && index < end ? 'block' : 'none';
+      });
+    }
+
+    function nextPage() {
+      if (currentPage * postsPerPage < blogPosts.length) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    }
+
+    function prevPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    }
+
+    window.onload = () => {
+      showPage(currentPage);
+    };
+  </script>
+
+</body>
+</html>
