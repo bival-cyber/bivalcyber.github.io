@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethicalbyet | Redefining Ethical Hacking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      overflow-x: hidden;
+      color: #fff;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 4rem;
+      color: #00ffae;
+      text-shadow: 0 0 15px #00ffae;
+      animation: neonGlow 2s ease-in-out infinite alternate;
+    }
+    @keyframes neonGlow {
+      0% {text-shadow: 0 0 10px #00ffae;}
+      100% {text-shadow: 0 0 20px #00ffae;}
+    }
+    header p {
+      font-size: 1.3rem;
+      color: #ccc;
+      margin-top: 15px;
+    }
+    .btn {
+      margin-top: 30px;
+      background: #00ffae;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      color: #000;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      background: #00ffc8;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 60px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 20px;
+      margin-bottom: 40px;
+      transition: transform 0.3s;
+    }
+    .glass-card:hover {
+      transform: scale(1.02);
+    }
+    .social-icons {
+      position: fixed;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 99;
+    }
+    .social-icons a {
+      text-decoration: none;
+      color: #00ffae;
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: #00ffd2;
+    }
+    footer {
+      background: #0f0f0f;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* Background Particle Layer */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      top: 0; left: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Particle Background -->
+<div id="particles-js"></div>
+
+<!-- Floating Social Icons -->
+<div class="social-icons">
+  <a href="https://www.linkedin.com/in/bival-rohin-452108172" target="_blank">LinkedIn</a>
+  <a href="https://bivalrohin.blogspot.com" target="_blank">Blog</a>
+  <a href="https://www.instagram.com/bival_rohin_" target="_blank">Instagram</a>
+  <a href="mailto:bivalrohin@mail.com">Mail</a>
+</div>
+
+<header data-aos="zoom-in">
+  <h1>Ethicalbyet</h1>
+  <p>Redefining Ethical Hacking with Futuristic Innovations</p>
+  <a href="#about"><button class="btn">Explore More</button></a>
+</header>
+
+<section id="about" data-aos="fade-up">
+  <div class="glass-card">
+    <h2>About Me</h2>
+    <p>Hi, I'm <strong>Bival Rohin</strong> — a passionate ethical hacker, cybersecurity specialist, and tech visionary. I help people and businesses stay secure in the digital world with advanced solutions.</p>
+  </div>
+</section>
+
+<section id="skills" data-aos="fade-right">
+  <div class="glass-card">
+    <h2>Skills</h2>
+    <ul>
+      <li>Penetration Testing</li>
+      <li>Web Application Security</li>
+      <li>Linux Exploitation</li>
+      <li>Network Sniffing</li>
+      <li>Reverse Engineering</li>
+    </ul>
+  </div>
+</section>
+
+<section id="tools" data-aos="fade-left">
+  <div class="glass-card">
+    <h2>Tools & Projects</h2>
+    <p>Explore my unique ethical hacking tools, real-world testing kits, and projects — soon coming as scrollable cards!</p>
+  </div>
+</section>
+
+<footer>
+  © 2025 Ethicalbyet | Designed with Passion by Bival Rohin
+</footer>
+
+<!-- JS Scripts -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {"value":80,"density":{"enable":true,"value_area":800}},
+      "color": {"value":"#00ffae"},
+      "shape": {"type":"circle"},
+      "opacity": {"value":0.5},
+      "size": {"value":3},
+      "line_linked": {"enable":true,"distance":150,"color":"#00ffae","opacity":0.4,"width":1},
+      "move": {"enable":true,"speed":2}
+    }
+  });
+</script>
+
+</body>
+</html>
