@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bival Rohin | Ethical Hacker & Cybersecurity Specialist</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      color: #0f0;
+      background: #000;
+      overflow-x: hidden;
+    }
+
+    /* Loading Screen */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .loading-text {
+      font-size: 1.5rem;
+      color: #0f0;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #000, #001122);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin: 0;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(2px, -2px); }
+      60% { transform: translate(-2px, 2px); }
+      80% { transform: translate(2px, -2px); }
+      100% { transform: translate(0); }
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .hero .cta-button {
+      padding: 1rem 2rem;
+      background: #0f0;
+      color: #000;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .hero .cta-button:hover {
+      background: #00cc66;
+    }
+
+    /* About Section */
+    .about {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 2px solid #0f0;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .about img:hover {
+      transform: scale(1.1);
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Skills Section */
+    .skills {
+      padding: 4rem 2rem;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .skill-card {
+      text-align: center;
+      padding: 1rem;
+      border: 1px solid #0f0;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .skill-card i {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 4rem 2rem;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .services-carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    .service-card {
+      min-width: 300px;
+      padding: 1rem;
+      border: 1px solid #0f0;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* Projects Section */
+    .projects {
+      padding: 4rem 2rem;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      padding: 1rem;
+      border: 1px solid #0f0;
+      border-radius: 8px;
+    }
+
+    /* Blog Section */
+    .blogs {
+      padding: 4rem 2rem;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .blog-post {
+      margin-bottom: 2rem;
+      border: 1px solid #0f0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 4rem 2rem;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      background: #000;
+      border: 1px solid #0f0;
+      color: #0f0;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 10px;
+      background: #0f0;
+      color: #000;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #000;
+    }
+
+    /* Back-to-Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0f0;
+      color: #000;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="loading-text">Loading...</div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div>
+      <h1>Bival Rohin</h1>
+      <p>Ethical Hacker & Cybersecurity Researcher</p>
+      <button class="cta-button">Explore Portfolio</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <img src="https://via.placeholder.com/150" alt="Bival Rohin">
+    <p>I'm Bival Rohin, an ethical hacker passionate about protecting digital spaces. With a strong foundation in penetration testing, vulnerability assessments, and cyber threat analysis, I help organizations secure their systems and data against malicious attacks. Let's build a safer cyberspace together.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Penetration Testing</h3>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-lock"></i>
+        <h3>Web App Security</h3>
+      </div>
+      <div class="skill-card">
+        <i class="fab fa-linux"></i>
+        <h3>Linux</h3>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-network-wired"></i>
+        <h3>Wireshark</h3>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-bug"></i>
+        <h3>Metasploit</h3>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-search"></i>
+        <h3>Nmap</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2>Services</h2>
+    <div class="services-carousel">
+      <div class="service-card">
+        <h3>Website Vulnerability Assessment</h3>
+      </div>
+      <div class="service-card">
+        <h3>Malware Analysis</h3>
+      </div>
+      <div class="service-card">
+        <h3>Secure Code Review</h3>
+      </div>
+      <div class="service-card">
+        <h3>Red Teaming & Penetration Testing</h3>
+      </div>
+      <div class="service-card">
+        <h3>Ethical Hacking Training</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>WiFi Pentesting Toolkit</h3>
+        <p>A toolkit for testing WiFi network security.</p>
+      </div>
+      <div class="project-card">
+        <h3>Phishing Page Analyzer</h3>
+        <p>Analyzes phishing pages for vulnerabilities.</p>
+      </div>
+      <div class="project-card">
+        <h3>Android Payload Generator</h3>
+        <p>Generates payloads for Android devices.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blogs" id="blogs">
+    <h2>Blog</h2>
+    <div class="blog-post">
+      <h3>New Android Malware Steals OTPs</h3>
+      <p>Recent Android malware strains are targeting OTPs and banking credentials...</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <div class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bival Rohin | Ethicalbyet</p>
+  </footer>
+
+  <!-- Back-to-Top Button -->
+  <div class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</div>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Loading Screen Script -->
+  <script>
+    window.addEventListener('load', () => {
+      const loadingScreen = document.querySelector('.loading-screen');
+      loadingScreen.style.display = 'none';
+    });
+  </script>
+
+  <!-- Back-to-Top Button Script -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const backToTop = document.querySelector('.back-to-top');
+      if (window.scrollY > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
