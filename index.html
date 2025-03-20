@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ethical Byet | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #00ff99;
+      overflow-x: hidden;
+    }
+
+    /* Loader */
+    #loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: #000;
+      color: #00ff99;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      font-size: 2em;
+    }
+
+    /* Terminal Popup */
+    #introTerminal {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 600px;
+      background: #111;
+      border: 2px solid #00ff99;
+      padding: 20px;
+      z-index: 10000;
+      display: none;
+      color: #00ff99;
+    }
+    #introTerminal pre {
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+
+    /* Hero Section */
+    header {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      text-shadow: 0 0 10px #00ff99;
+    }
+    header p {
+      max-width: 700px;
+      margin: 20px auto;
+      color: #99ffcc;
+      font-size: 1.2em;
+    }
+
+    /* Contact Icons */
+    .contact-icons {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .contact-icons a {
+      margin: 0 10px;
+      font-size: 1.5em;
+      color: #00ff99;
+      transition: 0.3s;
+    }
+    .contact-icons a:hover {
+      color: #00ccff;
+    }
+
+    /* Projects Section */
+    .projects {
+      padding: 60px 20px;
+      background-color: #0a0a0a;
+    }
+    .projects h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .project-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .project-card {
+      background: #111;
+      border: 1px solid #00ff99;
+      padding: 20px;
+      width: 280px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Blog Section */
+    .blog {
+      padding: 60px 20px;
+    }
+    .blog h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .filter-btns {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .filter-btns button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background: #00ff99;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .blog-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .blog-card {
+      background: #111;
+      border: 1px solid #00ff99;
+      padding: 20px;
+      width: 280px;
+      border-radius: 10px;
+      display: none;
+    }
+    .blog-card.active {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader">Loading Ethical Byet...</div>
+
+  <!-- Terminal Popup Intro -->
+  <div id="introTerminal">
+    <pre>
+Initializing Ethical Byet...
+> Welcome, Cyber Defender.
+> Get ready to explore ethical hacking, cybersecurity tools, and real-world projects.
+> Loading complete.
+</pre>
+  </div>
+
+  <!-- Hero Section -->
+  <header data-aos="fade-up">
+    <h1>Welcome to Ethical Byet</h1>
+    <p>Your trusted cybersecurity partner in ethical hacking and advanced digital protection.</p>
+  </header>
+
+  <!-- Contact Icons -->
+  <div class="contact-icons" data-aos="fade-up">
+    <a href="mailto:ethical.byet@mail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.instagram.com/_ethical_byet_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/bival-rohin-452108172" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  </div>
+
+  <!-- Projects Section -->
+  <section class="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <h3>Network Scanner</h3>
+        <p>Scan networks and discover connected devices with open ports.</p>
+      </div>
+      <div class="project-card">
+        <h3>Phishing Simulator</h3>
+        <p>Simulate phishing attacks for training and awareness testing.</p>
+      </div>
+      <div class="project-card">
+        <h3>XSS Payloads Tool</h3>
+        <p>Inject, test and analyze XSS vulnerabilities easily.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog" data-aos="fade-up">
+    <h2>Cybersecurity Blog</h2>
+    <div class="filter-btns">
+      <button onclick="filterBlog('all')">All</button>
+      <button onclick="filterBlog('scam')">Scam</button>
+      <button onclick="filterBlog('threat')">Threat</button>
+      <button onclick="filterBlog('attack')">Attack</button>
+    </div>
+    <div class="blog-cards">
+      <div class="blog-card scam active">
+        <h4>Fake Job Scams</h4>
+        <p>How scammers lure job seekers with fake interviews and offers.</p>
+      </div>
+      <div class="blog-card threat active">
+        <h4>Social Engineering</h4>
+        <p>Psychological manipulation of people to gain confidential info.</p>
+      </div>
+      <div class="blog-card attack active">
+        <h4>Ransomware Attacks</h4>
+        <p>Malware that encrypts files and demands payment for release.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Ethical Byet | Designed for Cyber Awareness
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Loader
+    window.onload = () => {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('introTerminal').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('introTerminal').style.display = 'none';
+      }, 6000);
+    };
+
+    // Blog Filter
+    function filterBlog(type) {
+      const cards = document.querySelectorAll('.blog-card');
+      cards.forEach(card => {
+        card.classList.remove('active');
+        if (type === 'all' || card.classList.contains(type)) {
+          card.classList.add('active');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
