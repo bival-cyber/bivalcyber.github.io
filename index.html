@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Byet | Ethical Hacker Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fira Code', monospace;
+            background: radial-gradient(circle, #0e0e0e 30%, #1a1a1a 100%);
+            color: #00ff99;
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: -1;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+            min-height: 100vh;
+            justify-content: center;
+        }
+
+        .glass-box {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(0, 255, 153, 0.4);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 900px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 30px rgba(0, 255, 153, 0.3), 0 -4px 20px rgba(0, 255, 255, 0.2);
+            animation: fadeIn 2s ease;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #00ff99;
+            text-shadow: 0 0 8px #00ff99, 0 0 20px #00cc88;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #00ccff;
+            text-shadow: 0 0 10px #00ccff;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            color: #d2ffd2;
+            text-shadow: 0 0 4px #d2ffd2;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #00ff99, #00ccff);
+            color: #000;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease;
+            box-shadow: 0 0 20px #00ff99, 0 0 40px #00ccff;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #00cc88, #0088cc);
+            box-shadow: 0 0 30px #00cc88, 0 0 60px #0088cc;
+        }
+
+        .social-links {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 1rem;
+            animation: fadeIn 3s ease;
+        }
+
+        .social-links a {
+            color: #00ccff;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+            color: #00ffff;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #888;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .btn {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <div class="glass-box">
+            <h1>Ethical Byet</h1>
+            <h2>Cybersecurity | Ethical Hacking | Bug Bounty</h2>
+            <p>Welcome to my official hacker portfolio. I’m on a mission to secure the digital world by learning, breaking, and fixing systems ethically.</p>
+
+            <a class="btn" href="#projects">View My Tools & Projects</a>
+
+            <div class="social-links">
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bival-rohin-452108172" target="_blank">bival-rohin</a></p>
+                <p><strong>Blogspot:</strong> <a href="https://bivalrohin.blogspot.com" target="_blank">bivalrohin.blogspot.com</a></p>
+                <p><strong>Instagram (Personal):</strong> <a href="https://www.instagram.com/bival_rohin_/" target="_blank">@bival_rohin_</a></p>
+                <p><strong>Instagram (Company):</strong> <a href="https://www.instagram.com/_ethical_byet_/" target="_blank">@_ethical_byet_</a></p>
+                <p><strong>Email (Personal):</strong> <a href="mailto:bivalrohin@mail.com">bivalrohin@mail.com</a></p>
+                <p><strong>Email (Company):</strong> <a href="mailto:ethical.byet@mail.com">ethical.byet@mail.com</a></p>
+                <p><strong>Contact:</strong> <a href="tel:+917012432915">+91 7012432915</a></p>
+            </div>
+
+            <footer>
+                <p>© 2025 Ethical Byet | Built with passion for hacking and learning.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Tools & Projects Section -->
+    <div id="projects" class="container" style="padding-top: 50px;">
+        <div class="glass-box">
+            <h2>Tools & Projects</h2>
+            <p>Here are some of my top cybersecurity tools and ongoing projects that reflect my learning and skill set.</p>
+            <ul style="list-style: none; padding: 0; margin-top: 20px; text-align: left;">
+                <li style="margin-bottom: 15px;">• <strong>Byet Payload Injector:</strong> A custom payload builder for ethical penetration testing.</li>
+                <li style="margin-bottom: 15px;">• <strong>ReconX Framework:</strong> A reconnaissance automation tool for bug bounty hunting.</li>
+                <li style="margin-bottom: 15px;">• <strong>Byet-Scanner:</strong> A powerful vulnerability scanner for testing common exploits.</li>
+                <li style="margin-bottom: 15px;">• <strong>Android Exploit Lab:</strong> A testing suite to experiment with Android attack vectors (for educational use).</li>
+                <li style="margin-bottom: 15px;">• <strong>EthicalByet Blog Auto-Updater:</strong> Auto-scripted updates for the blog section based on categorized security posts.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Particles.js Configuration -->
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 120, "density": { "enable": true, "value_area": 800 }},
+                "color": { "value": "#00ff99" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.6 },
+                "size": { "value": 3 },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#00ff99",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2.5
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": {
+                    "repulse": { "distance": 120 },
+                    "push": { "particles_nb": 6 }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
