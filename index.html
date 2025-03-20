@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ethical Byet</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: black;
+      color: #00fff7;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding-top: 20px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 10px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #00fff7;
+      text-decoration: none;
+      font-size: 1.2em;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s ease;
+    }
+    nav a:hover {
+      border-bottom: 2px solid #00fff7;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1em;
+    }
+    .contact-icons i {
+      font-size: 2em;
+      margin: 15px;
+      color: #00fff7;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact-icons i:hover {
+      color: #0fffc0;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+      background: #000;
+    }
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px 10px;
+    }
+    .project-card {
+      background-color: rgba(0, 255, 247, 0.08);
+      border: 1px solid #00fff7;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 15px #00fff7;
+    }
+    .project-title {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      color: #00fff7;
+    }
+    .project-desc {
+      font-size: 0.95em;
+      color: #ccc;
+    }
+    .tech-tags {
+      margin-top: 10px;
+    }
+    .tech-tags span {
+      background-color: #00fff7;
+      color: black;
+      padding: 3px 8px;
+      margin: 4px;
+      border-radius: 6px;
+      font-size: 0.8em;
+      display: inline-block;
+    }
+    .project-links {
+      margin-top: 12px;
+    }
+    .project-links a {
+      color: #00fff7;
+      margin: 0 10px;
+      text-decoration: underline;
+      font-size: 0.9em;
+    }
+
+    /* Background particles canvas */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: black;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<header>
+  <h1>Ethical Byet</h1>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#projects">Projects</a>
+  <a href="#blog">Blog</a>
+</nav>
+
+<section id="home">
+  <h2>Welcome to Ethical Byet</h2>
+  <p>Your cybersecurity partner in the digital world</p>
+  <button style="margin-top:20px; padding:10px 20px; font-size:1em; background:#00fff7; color:#000; border:none; border-radius:6px;">Explore More</button>
+</section>
+
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <p>I'm Bival Rohin, an ethical hacker dedicated to helping organizations and individuals protect their digital assets. I specialize in penetration testing, vulnerability assessment, and cybersecurity consulting. My mission is to create a safer digital world through ethical hacking methodologies and awareness.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <div class="project-title">WiFi Deauth Attack</div>
+      <div class="project-desc">Simulated wireless deauthentication attacks for educational penetration testing labs using Kali Linux tools.</div>
+      <div class="tech-tags">
+        <span>Kali Linux</span>
+        <span>Airodump-ng</span>
+        <span>Security</span>
+      </div>
+      <div class="project-links">
+        <a href="#">GitHub</a>
+        <a href="#">Demo</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-title">Phishing Payload Generator</div>
+      <div class="project-desc">Created phishing payload templates for awareness training and testing social engineering resilience.</div>
+      <div class="tech-tags">
+        <span>Social Engineering</span>
+        <span>Payloads</span>
+        <span>Awareness</span>
+      </div>
+      <div class="project-links">
+        <a href="#">GitHub</a>
+        <a href="#">Demo</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-title">Port Scanning Suite</div>
+      <div class="project-desc">Built a custom Nmap-based port scanning tool with enhanced logging and stealth modes.</div>
+      <div class="tech-tags">
+        <span>Nmap</span>
+        <span>Network Security</span>
+        <span>Linux</span>
+      </div>
+      <div class="project-links">
+        <a href="#">GitHub</a>
+        <a href="#">Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <h2>Blog</h2>
+  <p>Coming soon… Stay tuned for cybersecurity blogs and tutorials.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-icons">
+    <a href="mailto:ethical.byet@mail.com"><i class="fas fa-envelope"></i></a>
+    <a href="tel:+917012432915"><i class="fas fa-phone"></i></a>
+    <a href="https://instagram.com/_ethical_byet_" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com/in/bival-rohin-452108172" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</section>
+
+<div class="footer">
+  © All rights reserved by Ethicalbyet. Designed by Bival Rohin.
+</div>
+
+<!-- Particles JS -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 60 },
+      "color": { "value": "#00fff7" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.5 },
+      "size": { "value": 3 },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#00fff7",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": { "enable": true, "speed": 2 }
+    },
+    "interactivity": {
+      "events": { "onhover": { "enable": true, "mode": "repulse" } }
+    }
+  });
+</script>
+
+</body>
+</html>
