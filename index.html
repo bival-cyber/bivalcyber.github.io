@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ethicalbyet</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace; /* Tech-inspired font */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Align content to the top */
+            min-height: 100vh; /* Use min-height to allow scrolling */
+            background: linear-gradient(to bottom, #001f3f, #000000);
+            color: #fff;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        .stars {
+            position: fixed; /* Fixed position for parallax effect */
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1; /* Place stars behind content */
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle linear infinite, moveStars linear infinite;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle glow */
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes moveStars {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(20px); }
+        }
+
+        .content {
+            width: 100%;
+            max-width: 800px;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #00bfff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .links {
+            margin-top: 30px;
+        }
+
+        .links a {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 0 15px;
+            background-color: #00bfff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .links a:hover {
+            background-color: #008080;
+            transform: translateY(-3px); /* Slight lift on hover */
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+            padding-bottom: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            .links a {
+                padding: 10px 20px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <div class="content">
+        <div class="logo-container">
+            <img src="your-logo.png" alt="ethicalbyet Logo" class="logo">
+        </div>
+
+        <h1>Welcome to ethicalbyet</h1>
+
+        <p>This is the official website for ethicalbyet. We are dedicated to providing ethical hacking resources, tutorials, and community support. Our goal is to promote responsible cybersecurity practices and help individuals learn about network security in a safe and legal environment.</p>
+
+        <div class="links">
+            <a href="https://github.com/your-github-username" target="_blank">GitHub</a>
+            <a href="https://your-blog-or-forum.com" target="_blank">Blog/Forum</a>
+            <a href="mailto:your-email@example.com">Contact Us</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 ethicalbyet. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const starsContainer = document.querySelector('.stars');
+        const numStars = 200;
+
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.width = `${Math.random() * 3}px`;
+            star.style.height = star.style.width;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.style.top = `${Math.random() * 100}vh`;
+            star.style.animationDelay = `${Math.random() * 3}s`;
+
+            // Vary star properties
+            star.style.opacity = Math.random();
+            star.style.backgroundColor = `rgba(255, 255, 255, ${Math.random()})`;
+            star.style.animationDuration = `${Math.random() * 3 + 2}s`; // Vary speed
+
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</body>
+</html>
