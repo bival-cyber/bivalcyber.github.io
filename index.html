@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ethicalbyet - Cybersecurity Solutions</title>
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace; /* Tech-focused font */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #121212, #000000); /* Dark background */
+            color: #e0e0e0; /* Light text */
+            overflow-x: hidden;
+        }
+
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: #00bfff; /* Neon blue stars */
+            border-radius: 50%;
+            animation: twinkle linear infinite, moveStars linear infinite;
+            box-shadow: 0 0 8px rgba(0, 191, 255, 0.7); /* Neon glow */
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes moveStars {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(20px); }
+        }
+
+        .content {
+            width: 100%;
+            max-width: 800px;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #00bfff;
+            text-shadow: 2px 2px 4px rgba(0, 191, 255, 0.5);
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .code-snippet {
+            background-color: #212121;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            text-align: left;
+            font-family: monospace;
+            white-space: pre-wrap;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .links {
+            margin-top: 30px;
+        }
+
+        .links a {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 0 15px;
+            background-color: #00bfff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .links a:hover {
+            background-color: #008080;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+            padding-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            .links a {
+                padding: 10px 20px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <div class="content">
+        <div class="logo-container">
+            <img src="your-logo.png" alt="ethicalbyet Logo" class="logo">
+        </div>
+
+        <h1>Ethical Hacking & Cybersecurity</h1>
+
+        <p>Welcome to ethicalbyet, your hub for advanced cybersecurity solutions and ethical hacking expertise. We provide comprehensive services to safeguard your digital assets and empower you with the knowledge to protect against evolving threats.</p>
+
+        <div class="code-snippet">
+            <code>
+            # Sample Python Script for Network Scanning
+            import socket
+
+            def scan_port(target, port):
+                try:
+                    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                    s.connect((target, port))
+                    return True
+                except:
+                    return False
+
+            target = '192.168.1.1'
+            for port in range(1, 1025):
+                if scan_port(target, port):
+                    print(f"Port {port} is open")
+            </code>
+        </div>
+
+        <div class="links">
+            <a href="https://github.com/your-github-username" target="_blank">GitHub</a>
+            <a href="https://your-blog-or-forum.com" target="_blank">Blog/Forum</a>
+            <a href="mailto:your-email@example.com">Contact Us</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 ethicalbyet. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const starsContainer = document.querySelector('.stars');
+        const numStars = 200;
+
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.width = `${Math.random() * 3}px`;
+            star.style.height = star.style.width;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.animationDelay = `${Math.random() * 3}s`;
+
+            star.style.opacity = Math.random();
+            star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</body>
+</html>
