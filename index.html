@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EthicalByet</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Background Animation */
+        body {
+            background: #000;
+            color: #0f0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Moving Lines Effect */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                to bottom, 
+                rgba(0, 255, 0, 0.1), 
+                rgba(0, 255, 0, 0.1) 1px, 
+                transparent 1px, 
+                transparent 10px
+            );
+            animation: moveBackground 10s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100%); }
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #0f0;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            text-shadow: 0 0 5px #0f0;
+        }
+
+        /* Content Container */
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        section {
+            padding: 20px 0;
+        }
+
+        h2 {
+            border-bottom: 2px solid #0f0;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #0f0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-shadow: 0 0 5px #0f0;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>EthicalByet</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>About Ethical Hacking</h2>
+                <p>Ethical hacking, also known as penetration testing, is the practice of testing computer systems, networks, or web applications to identify security vulnerabilities. Ethical hackers use their skills to strengthen cybersecurity and protect sensitive data.</p>
+            </div>
+        </section>
+
+        <section id="resources">
+            <div class="container">
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="https://www.kali.org" target="_blank">Kali Linux</a> - A popular Linux distribution for penetration testing.</li>
+                    <li><a href="https://owasp.org" target="_blank">OWASP</a> - Open Web Application Security Project for web security knowledge.</li>
+                    <li><a href="https://www.exploit-db.com" target="_blank">Exploit Database</a> - A repository of publicly known exploits.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 EthicalByet. All rights reserved.</p>
+    </footer>
+</body>
+</html>
