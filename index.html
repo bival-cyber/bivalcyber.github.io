@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethical Byet - Cyber Vanguard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Share Tech Mono', monospace;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #00ffcc;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* New Background Animation - Glitch Grid */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: #0a0a0a;
+    }
+
+    .grid-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 204, 0.05) 0,
+        rgba(0, 255, 204, 0.05) 1px,
+        transparent 1px,
+        transparent 20px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(0, 255, 204, 0.05) 0,
+        rgba(0, 255, 204, 0.05) 1px,
+        transparent 1px,
+        transparent 20px
+      );
+      animation: glitchShift 4s infinite linear;
+      opacity: 0.7;
+    }
+
+    @keyframes glitchShift {
+      0%, 100% { transform: translate(0, 0); }
+      20% { transform: translate(-5px, 5px); }
+      40% { transform: translate(5px, -5px); }
+      60% { transform: translate(-3px, 3px); }
+      80% { transform: translate(3px, -3px); }
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 30px 15px;
+      background: rgba(10, 10, 10, 0.8);
+      border-bottom: 2px solid #00ffcc;
+      position: relative;
+      z-index: 2;
+      backdrop-filter: blur(5px);
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      color: #fff;
+      text-shadow: 0 0 15px #00ffcc;
+      animation: flicker 3s infinite;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-size: 1.3em;
+      padding: 8px 20px;
+      border: 1px solid #00ffcc;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #00ffcc;
+      color: #0a0a0a;
+      box-shadow: 0 0 20px #00ffcc;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 30px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-title {
+      font-size: 2.5em;
+      color: #fff;
+      text-shadow: 0 0 10px #00ffcc;
+      margin-bottom: 30px;
+    }
+
+    .about-text {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #66ffcc;
+    }
+
+    /* Project Grid */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .project-card {
+      background: rgba(26, 26, 26, 0.9);
+      border: 2px solid #00ffcc;
+      padding: 25px;
+      border-radius: 12px;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      backdrop-filter: blur(3px);
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00ffcc;
+      background: rgba(0, 255, 204, 0.1);
+    }
+
+    .project-card h3 {
+      color: #fff;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      color: #b3ffcc;
+      margin-bottom: 15px;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tech-tags span {
+      background: #00ffcc;
+      color: #0a0a0a;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.9em;
+    }
+
+    /* Contact */
+    .contact-icons {
+      font-size: 2em;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-top: 20px;
+    }
+
+    .contact-icons a {
+      color: #00ffcc;
+      transition: all 0.3s ease;
+    }
+
+    .contact-icons a:hover {
+      transform: scale(1.3);
+      text-shadow: 0 0 15px #00ffcc;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 2px solid #00ffcc;
+      font-size: 1em;
+      color: #00ffcc;
+      background: rgba(10, 10, 10, 0.8);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Animations */
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="grid-overlay"></div>
+  </div>
+
+  <header>
+    <h1>Ethical Byet</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2 class="section-title">Welcome to Ethical Byet</h2>
+    <p style="font-size: 1.4em; color: #66ffcc;">Your cybersecurity partner in the digital world</p>
+    <br>
+    <a href="#projects" style="padding: 12px 25px; background: #00ffcc; color: #0a0a0a; border-radius: 6px; text-decoration: none; transition: all 0.3s ease;">Explore More</a>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-text">
+      <p>Hi, I'm <strong>Bival Rohin</strong>, a passionate and dedicated ethical hacker committed to securing digital landscapes. With a strong focus on penetration testing, vulnerability assessments, and cybersecurity research, I help individuals and organizations protect their digital assets from evolving threats. Through Ethical Byet, I aim to spread awareness, build security tools, and contribute to a safer cyberspace.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid">
+      <div class="project-card" onclick="window.open('https://github.com/ethicalbyet/web-vuln-scanner', '_blank')">
+        <h3>Web Application Vulnerability Scanner</h3>
+        <p>A tool designed to find common vulnerabilities like XSS, SQLi, CSRF, etc., in web apps.</p>
+        <div class="tech-tags">
+          <span>Python</span><span>SQLi</span><span>XSS</span><span>CSRF</span>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="window.open('https://github.com/ethicalbyet/phishing-detector', '_blank')">
+        <h3>Phishing Page Detection</h3>
+        <p>Python-based tool that detects phishing domains using keyword matching and URL analysis.</p>
+        <div class="tech-tags">
+          <span>Python</span><span>Regex</span><span>Security</span>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="window.open('https://github.com/ethicalbyet/payload-generator', '_blank')">
+        <h3>Payload Generator</h3>
+        <p>Generates Metasploit-compatible payloads for ethical testing on test machines and labs.</p>
+        <div class="tech-tags">
+          <span>Shell</span><span>Metasploit</span><span>Reverse Shell</span>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="window.open('https://github.com/ethicalbyet/wifi-honeypot', '_blank')">
+        <h3>Wi-Fi Honeypot Script</h3>
+        <p>Fake Wi-Fi access point used to analyze attacker behavior in controlled environments.</p>
+        <div class="tech-tags">
+          <span>Linux</span><span>Network</span><span>Honeypot</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2 class="section-title">Blog</h2>
+    <div class="project-card" style="max-width: 800px; margin: 0 auto;" onclick="window.open('https://bivalrohin.blogspot.com/2025/04/beware-of-call-scams.html', '_blank')">
+      <h3>Beware of Call Scams: Protecting Yourself from Fraudsters</h3>
+      <p>In today’s digital age, call scams have become an increasingly prevalent threat. This post explores common tactics used by scammers and provides practical tips to protect yourself.</p>
+      <div class="tech-tags">
+        <span>Cybersecurity</span><span>Awareness</span><span>Scams</span>
+      </div>
+    </div>
+    <p style="margin-top: 20px;">More coming soon...</p>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-icons">
+      <a href="mailto:ethical.byet@mail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+917012432915" title="Phone"><i class="fas fa-phone"></i></a>
+      <a href="https://www.instagram.com/_ethical_byet_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/bival-rohin-452108172" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://bivalrohin.blogspot.com" target="_blank" title="Blogspot"><i class="fab fa-blogger-b"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 All rights reserved by Ethical Byet. Designed by Bival Rohin.
+  </footer>
+</body>
+</html>
